@@ -11,16 +11,19 @@
     </style>
     <!--Nav-->
     <style>
-        nav {color: red;}
+        nav {color: red; background-color: gray; padding-bottom: 20px; padding-top: 20px;}
         ul {list-style-type: none; padding-left: 20px;}
         hr {border: 3px dashed black;}
-        li {float:left; margin-right: 10px;background-color: aqua;}
-        .hrDash {border-color: blue;}
+        li {margin-bottom: 10px; color: red; font-size: 20px;}
+        
     </style>
     <!--Section-->
     <style>
-        iframe.class1 {border-style: none; height: 400px;}
         .sectionclass {padding-top: 10px; padding: 20px;}
+    </style>
+        <link rel="stylesheet" href="mystyle.css">
+    <style>
+        aside {float: right;height: 400px; width: 130px;background-color: lightgreen;}
     </style>
 </head>
 
@@ -31,25 +34,29 @@
         <p><h2 class="hSub">HTML5 이란 무엇인가?! (본격 해부)</h2></p>
     </header>
     <!--MENU-->
+    <hr>
     <nav>
-        <hr>
         <p>
-            <ul >
+            <ol type="1">
                 <li>
-                    <a href="C:\Users\Alexander\HTML\000000_HTML5_PAGE1.html" target="view">
+                    <a href="#HTML" target="view">
                         HTML의 역사
                     </a>
                 </li>
                 <li>
-                    <a href="C:\Users\Alexander\HTML\000000_HTML5_PAGE2.html" target="view">
+                    <a href="#WEB" target="view">
                         WEB이란?
                     </a>
                 </li>
                 <li>
-                    HTML TAG
+                    <a href="#HTMLTAG">
+                        HTML 주요 요소
+                    </a>
                 </li>
                 <li>
-                    CSS
+                    <a href="#CSS">
+                        CSS
+                    </a>
                 </li>
                 <li>
                     <a href="https://cs1.knou.ac.kr/sites/cs1/" target="_blank">
@@ -57,13 +64,107 @@
                     </a>
                 </li>
             </ul>
+        
         </p>
     </nav>
-    <section class=".sectionclass">
-        <p>
-            <br>
-            <iframe name="view" height="1000" width="900" class="class1"></iframe>
-        </p>
+    <hr>
+    <section>
+        <article id="HTML">
+            <aside>
+                aside
+            </aside>
+            <p>
+                <h2>
+                    <strong>
+                        1. HTML의 역사
+                    </strong>
+                </h2>
+                <dl>
+                    <dt>1991년, CERN의 팀 버너리스가 개발</dt>
+                    <dt>1993년, 미국 마크 앤드리슨과 에릭 비나의 Mosaic이 보편화</dt>
+                    <dt>1995년, IETF에 의해 HTML2.0이 개발</dt>
+                    <dt>1994년, W3C 결성</dt>
+                    <dt>1998년, HTML4.0 발표</dt>
+                    <dd><small>&nbsp;&nbsp;&nbsp;&nbsp;CSS와 Javascript가 포함</small></dd>
+                    <dt>1999년, HTML4.01 표준</dt>
+                    <dt>2000년 이후, XHTML 등장</dt>
+                    <dd><small>&nbsp;&nbsp;&nbsp;&nbsp;HTML과 XML을 합친것으로 HTML을 완전히 대체하지는 못함.</small></dd>
+                    <dt>2004년, Web Applications 1.0 발표 (WHATWG)</dt>
+                    <dt>2008년, HTML5 초안 공개</dt>
+                    <dt>2014년, HTML5가 차세대 웹 표준으로 채택</dt>
+                    <dt>2016년, 2017년에 각각 HTML5.1과 HTML5.2가 최신표준으로 지정</dt>
+                    <dt>2019년, HTML Living Standard 표준</dt>
+                    <dd><small>&nbsp;&nbsp;&nbsp;&nbsp;W3C와 WHATWG의 공동 표준 작업</small></dd>
+                </dl>
+            </p>
+        </article>
+        <article id="WEB">
+            <h2><strong>2. 웹 이란 무엇인가?</strong></h2>
+            <p>웹 이란, <br>세계적 규모의 거미집 형태의 망이라는 뜻으로, 하이퍼링크 개념과 그래픽 환경의 
+                인터페이스를 사용하여 다양한 형태의 데이터와 정보에 접근할 수 있도록 만든 인터넷 서비스를 말한다.</p>
+            <video controls loop width="30%" poster="C:\Users\Alexander\Downloads\network-g11bd1d324_1920.jpg">
+                <source src="C:\Users\Alexander\Downloads\-45961.mp4#t=10,20" type="video/mp4">
+                이 브라우저는 MP4를 지원하지 않습니다.
+            </video>
+        </article>
+        <article>
+            <p>인터넷이란,<br>1969년 미국 국방성 산하의 고등연구국에서 유사시에도 안정된 정보와 자원 공유를 위해 만든 ARPANET이 그 시초로
+            오늘날 전 세계적으로 컴퓨터를 연결시켜주는 네트워크 시스템을 말한다.</p>
+            <p>웹은 1989년에 CERN에서 연구자들이 상호 연구의 신속한 정보 교환과 관리를 위한 개념에서 시작하여 
+                팀 버너스리에 의해 최초로 설계 되었다.<br>
+                웹 페이지는 HTML과 CSS 그리고 JavaScript를 통해 만들 수 있다.
+            </p>
+        </article>
+        <article id="HTMLTAG">
+            <h2>
+                3. HTML 주요 요소
+            </h2>
+            <dl>
+                <dt>
+                    <b>&lt;br&gt;&nbsp;: 줄바꿈 요소 </b>
+                    <dd>HTML에 작성한 문서의 개행을 표시하기 위한 요소 입니다.</dd>
+                    <dd>종료 태그가 필요하지 않습니다.</dd>
+                </dt>
+                <dt>
+                    <b>&lt;h<small>n</small>&gt;&nbsp;: 제목 지정 요소</b>
+                    <dd>문서의 제목을 작성할 때 사용합니다. n의 값을 입력하면 글자의 크기가 변경됩니다.</dd>
+                    <dd><i><small>n의 값이 작으면 반대로 글자의 크기가 커집니다.</small></i></dd>
+                </dt>
+                <dt>
+                    <b>
+                        &lt;img&gt;&nbsp;: 이미지 삽입 요소
+                    </b>
+                    <dd>
+                        문서에 이미지를 입력하기 위해 사용하는 요소입니다.
+                    </dd>
+                </dt>
+                <dt>
+                    <b>
+                        &lt;a&gt;&nbsp;: 하이퍼링크 요소
+                    </b>
+                    <dd>
+                        문서에서 특정 웹페이지와 연결시켜주는 요소 입니다.
+                        <br>이는 특정 웹사이트, 문서내의 다른 영역, 파일등 여러 형태를 지정할 수 있습니다.
+                    </dd>
+                </dt>
+                <dt>
+                    <b>
+                        &lt;iframe&gt;&nbsp;: 웹페이지 속에 다른 웹페이지 출력하는 요소
+                    </b>
+                    <dd>
+                        웹페이지속에서 다른 웹페이지를 표시하는데 사용 됩니다. 
+                    </dd>
+                </dt>
+            </dl>
+        </article>
+        <dl>
+            <dt></dt>
+        </dl>
+        <article id="CSS">
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+        </article>
+        
     </section>
     <footer>
         <p>
@@ -74,12 +175,10 @@
                     이재욱_202234-153741
                 </a>
             </strong>
-            <p>
-                <h6> 
-                    e-mail : hbstudio@naver.com
-                </h6>
-            </p>
-                
+            <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="mailto:hbstudio@naver.com">
+                e-mail : hbstudio@naver.com
+            </a>
         </p>
     </footer>
 </body>
