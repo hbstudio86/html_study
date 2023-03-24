@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 <head>
-
+    <meta charset="UTF-8">
 </head>
 <body>
-    
+    <form action="" method="post" name="TEST_FORM">
+        <!--method의 post는 html의 request 형태로 전달되어 보안이 좋다. get는 url로 전송하니 보안에 취약-->
+        password <input type="password"><br>
+        button <input type="button"><br>
+        checkbox <input type="checkbox"><br>
+        text <input type="text" value="입력하세요" autofocus><br>
+        text <input type="text"  size="3" maxlength="4" autofocus><br>
+        textarea <textarea rows="3" cols="50" >
+            여러줄의 텍스트를 입력하기 좋습니다.
+        </textarea><br>
+    </form>
 </body>
