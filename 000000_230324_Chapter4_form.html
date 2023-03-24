@@ -3,7 +3,7 @@
     <meta charset="UTF-8">
 </head>
 <body>
-    <form action="" method="post" name="TEST_FORM">
+    <form action="" method="post" name="TEST_FORM" id="frm_id">
         <!--method의 post는 html의 request 형태로 전달되어 보안이 좋다. get는 url로 전송하니 보안에 취약-->
         password <input type="password"><br>
         button <input type="button"><br>
@@ -13,5 +13,50 @@
         textarea <textarea rows="3" cols="50" >
             여러줄의 텍스트를 입력하기 좋습니다.
         </textarea><br>
+        전화번호 입력 <input type="tel" required><br>
+        이메일 입력 <input type="email" required><br>
+        range type <input type="range"><br>
+        radio btn1 <input type="radio" value="1" name="t1"><br>
+        radio btn2 <input type="radio" value="2" name="t1" checked><br>
+        radio btn3 <input type="radio" value="3" name="t1"><br>
+        radio btn4 <input type="radio" value="4" name="t1"><br>
+        radio btn1 <input type="radio" value="1" name="t2"><br>
+        radio btn2 <input type="radio" value="2" name="t2"><br>
+        radio btn3 <input type="radio" value="3" name="t2" checked><br>
+        radio btn4 <input type="radio" value="4" name="t2"><br>
+
+        checkbox1 <input type="checkbox" name="ch1" value="1" checked>
+        checkbox2 <input type="checkbox" name="ch1" value="2">
+        checkbox3 <input type="checkbox" name="ch2" value="3">
+        checkbox4 <input type="checkbox" name="ch2" value="4" checked>
+        <br>
+        accept <input type="file" accept="image/*" multiple><br>
+
+        <select size="1">
+            <optgroup label="Group#1">
+                <option value="1">1</option>
+                <option value="2">2</option>
+            </optgroup>
+            <optgroup label="Group#2">
+                <option value="3">3</option>
+                <option value="4">4</option>
+            </optgroup>
+        </select> <br>
+
+        <input type="text" list="datalist_id">
+        <datalist id="datalist_id">
+            <option value="1">
+            <option value="2">
+            <option value="3">
+            <option value="4">
+        </datalist> <br>
+
+        <input type="color" name="colors">
+
+        <button></button>
+
     </form>
+    <input type="submit" form="frm_id">
+    <input type="reset" form="frm_id">
+    
 </body>
