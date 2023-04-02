@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <!--선택자 {선언 블록 (선언;선언;)}-->
+    <!--1.style요소 사용 : 각문서마다 적용 임베디드 방법, 2. style속성 사용 : 하나의 문서에서 직접사용 인라인 방법 3. 외부파일 사용 : 별도 파일에서 불러옴 링크 방법-->
+    <!--link rel, @import url() or @import ""-->
+    <style>
+        p {background-color: red;}
+        li.i891 {color: red;}    
+        #i888 {font-style: italic;}
+        .i889 {color: blue;}
+        .i890 {font-size: large;}
+        li[type] {color: black;}
+        li[type = "text"] {font-size: small;}
+        li:nth-child(2) {background-color: pink;}
+        p.line::first-letter {color: green; font-size: 200%;}
+        p.line::first-line {background-color: white; font-style: italic;}
+        li~li {font-weight: bold;}
+    </style>
+</head>
+<body>
+    <p style="background-color: royalblue;">CSS</p> <!--속성-->
+    <ul>
+        <li id="i888">
+            hello
+        </li>
+        <li>
+            world!
+        </li>
+        <li id="i888" class="i891 i889">
+            welcome HTML
+        </li>
+        <li type="text">
+            CSS!!
+        </li>
+    </ul>
+    <p class="line">dkvjitkjkv ai tjkjda it kzdjif kjtidjvjkijt kjaijklajtkjivnkhkhkljitjklaijhv  asdkjtkalkijvd ivhalktnlakdi ankdanlktjiaelaicij advlkti<br>
+    akasjvdkaisjlijt iadkjasv jasdktkljasdij asdkjlawetijasdfkjasldvijag4hhad.asdviasjgjtlasdf.adsvjadivawjegt .</p>
+</body>
