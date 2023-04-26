@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<head>
+    <style>
+        div {
+            width:100px; height: 100px; left:0px; position:relative;
+            background-color:violet;
+            transition-property:width, left, background-color;
+            transition-duration: 1s,1s,1s;
+            transition-delay: 1s,1s,1s;
+            transition-timing-function:ease-in,linear,ease-in-out;
+        }
+        div:hover {
+            width: 400px;
+            left:300px;
+            background-color:blue;
+        }
+        .class1 {
+            width: 200px; height:200px;
+            background-color: pink;
+            transition : width 2s 2s, height 2s, transform 2s;
+        }
+        p:hover {
+            width:400px; height: 400px;
+            transform: rotate(720deg);
+        }
+        @keyframes myAnimation1{
+            from {left:0px}
+            to {left:200px}
+        }
+        span {
+            position: relative; left: 0px;
+            background-color: aqua;
+
+        }
+        span:hover {
+            animation-name: myAnimation1;
+            animation-duration: 2s;
+            animation-timing-function: linear;
+            animation-delay: 2s;
+        }
+        body section article {
+            columns: 3 100px;
+            column-gap: 80px;
+            column-rule:10px double gray;
+            column-fill: balance;
+        }
+        body section article h2 {
+            column-span: all;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        마우스를 올려놓으면 사각형의 폭이 늘어남.
+    </div>
+    <p class="class1">
+        박스가 커지고 회전을 해요!!
+    </p>
+    <span>heheheh</span>
+    <section>
+        <article>
+            <h2>문서 제목</h2>
+            도이마ㅣㅇ링리ㅏ밍ㄹ민이러ㅣㅁ라ㅣ밎더람저디라ㅣㅁㅈ더라저ㅣㄷㄹ마ㅣㅓㄷㄹ
+            ㅁㅈ다림자ㅓㄷ리ㅓ자ㅓㄹ미ㅏ젇리ㅏㅓㅁ지라ㅓㅣㅁ자더랒먿럼ㅈ
+            ㅁ자더림자ㅓ다럼지덜지ㅏㅓㄷㄻ젇라ㅣㅁ젇ㄹ
+            ㅁㅈ다ㅓㅁ쟈퓸ㅈㄷ고ㅑㅁ섬자ㅣㅓ랴ㅓㅈㅁ디서ㅏㅁㅈ더ㅑㅏㅁㅈ하ㅓ미햐ㅓㅍㅁ거4ㅛㅅ히ㅏ
+            마ㅣㅓ쇼ㅏㅓㅁ죠ㅑㅓㅁㅈㄷ거ㅣ마ㅓ퍔ㅈㄷ감
+            ㅁ다러먀ㅣ사ㅓㅁㄷㄱ시ㅑ머사ㅓㅑ퍼ㅛㅚ멂쟈ㅓ닿
+            샤ㅏㅇ먀ㅓ파ㅓㅁ자ㅣ쇼ㅓ미ㅑㅈ더리먖더ㅏ쇼ㅓㅣㅁ야ㅓㅣㅑㅍㅈ묏허ㅣㅏㄷ서ㅏㅣㅁㅈㄷㄳㅁㅈ다ㅓㅁ지ㅏㄷ서
+            ㅏ미어마지서ㅑㅁㅈㄷ심지솨ㅗ퍄ㅑㅈㅁㄷㅅ<br>
+            dalfisakldflawietjajuertiat adsivjiatyjadi vhjagyl;asrujiusvjh ryikasdhjiawyl
+            altyidflao tykasdfig yh
+        </article>
+    </section>
+</body>
