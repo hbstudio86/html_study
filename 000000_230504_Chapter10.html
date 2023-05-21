@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <style>
+        table {border: 1px solid black;}
+        table tr th {border: 1px solid black;}
+        table tr td {border: 1px solid black;}
+    </style>
+    <script>
+        document.writeln("HELLO JAVA SCRIPT!" + "<br>"); // java와 매우 유사하구만...
+    </script>
+</head>
+<body>
+    <script>
+        document.writeln("Hello world!" + "<br>" )    // 이런방식도 가능하다.
+        let outVar; // 전역변수
+        function func1(){
+            let inVar;  // 지역 변수
+            document.writeln("지역 변수 선언" + inVar+ "<br>");
+            inVar = 10;
+            document.writeln("지역 변수 선언" + inVar+ "<br>");
+            addr = "Hello wolrd";
+            document.writeln("지역 변수 선언" + addr+ "<br>");
+            outVar = 30;
+            document.writeln("지역 변수 선언" + outVar+ "<br>");
+        }
+        func1();
+        //document.writeln("지역 변수 선언" + inVar);
+        document.writeln("지역 변수 선언" + addr + "<br>");
+        document.writeln("지역 변수 선언" + outVar + "<br>");
+        alert("확인!");
+        let b = confirm("확인 취소");
+        document.write(b+"<br>");
+        b = parseInt(prompt("입력하세요","5"));
+        document.write(b+"<br>");
+        let c = "JAVASCRIPT".length;
+        document.writeln(c + "<br>");
+        str1 = "JAVAScript";
+        document.write(str1.indexOf("S") + "<br>");
+        now = new Date();
+        document.write(now.getFullYear() + "<br>" + now.getMonth() + "<br>" + now.getDate() + "<br>");
+        document.write(now + "<br>" + now.toLocaleString() + "<br>");
+        document.write(Math.random() + "<br>" + Math.floor(Math.random()*11) + "<br>");
+
+        // 사용자 객체
+        function Student (name,dept,grade){
+            this.name = name;
+            this.dept = dept;
+            this.grade = grade;
+            this.print = function() {
+                document.write(this.name+"은/는 "+this.dept+"와/과 "+this.grade+"학년 학생입니다.<br>");
+            }
+        }
+        John = new Student("John","컴퓨터공학",3);
+        John.print();
+    </script>
+    <section>
+        <div>
+            <h2>
+                JavaScript vs JAVA
+            </h2>
+                <table>
+                    <tr>
+                        <th>
+                            특징
+                        </th>
+                        <th>
+                            JAVA
+                        </th>
+                        <th>
+                            JavaScript
+                        </th>
+                    </tr>
+                    <tr>
+                        <td>
+                            작성방법
+                        </td>
+                        <td>
+                            별도의 소스파일로 작성
+                        </td>
+                        <td>
+                            HTML 내에 직접 삽입
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            실행 방식
+                        </td>
+                        <td>
+                            소스를 컴파일하여 자바 가상머신 <br> 위에서 실행되는 컴파일 언어
+                        </td>
+                        <td>
+                            클라이언트에서 직접 해석되고 <br> 실행되는 인터프리터 언어
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            변수 선언
+                        </td>
+                        <td>
+                            명시적인 선언이 필요
+                        </td>
+                        <td>
+                            선언이 불필요
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            보안성
+                        </td>
+                        <td>
+                            소스를 볼 수 없으므로 <br> 보안 유지가 가능
+                        </td>
+                        <td>
+                            브라우저의 메뉴를 통해 <br> 소스를 볼 수 있어 보안이 취약
+                        </td>
+                    </tr>
+                
+                </table>
+        </div>
+        <br>
+        <article>
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            내부 스크립트 방식
+                        </td>
+                        <td>
+                            문서에서 &lt;script&gt;와 &lt;/script&gt; 사이에 소스를 위치시킴 <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            외부 스크립트 방식
+                        </td>
+                        <td>
+                            소스를 별도의 외부파일(js)로 만들어 놓고 불러와 사용 <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            인라인 스크립트 방식
+                        </td>
+                        <td>
+                            html 요소 내부에서 이벤트 속성의 값으로 코드를 직접 삽입 <br>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+    </section>
+    <br>
+    <section>
+        <article>
+            <div>
+                <table>
+                    <tr>
+                        <td>
+                            내장 객체
+                        </td>
+                        <td>
+                            Array&nbsp;Math&nbsp;String&nbsp;Date
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            사용자 정의 객체
+                        </td>
+                        <td>
+                            직접 지정
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </article>
+    </section>
+</body>
