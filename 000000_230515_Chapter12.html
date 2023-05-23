@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+    <style>
+
+        canvas {border: 1px solid red; width: 700px;
+        height: 700px; background-color: azure;};
+
+
+    </style>
+</head>
+<body>
+    <h2>CHAPTER 12 CANVAS</h2>
+    <canvas id="CVS"></canvas>
+    <script>
+        let canvas = document.getElementById("CVS");
+        let cvx = canvas.getContext("2d");
+        //let cvx = document.getElementByID("CVS").getContext("2d");
+
+        cvx.font = "20px 굴림체";
+        cvx.fillStyle = "red";
+        cvx.fillText("Canvas 맛보기",85,70);
+
+        cvx.strokeStyle = "blue";
+        cvx.strokeRect(70,40,200,100);
+
+        cvx.font = "10px 궁서체";
+        cvx.fillStyle = "green";
+        cvx.fillText("반복 숙달이 길이다!",40,50);
+        cvx.strokeStyle = "red";
+        cvx.strokeRect(30,30,30,30);
+        
+        cvx.font = "40px 명조체";
+        cvx.fillStyle = "yellow";
+        cvx.fillText("반복 숙달이 길이다!!",50,50);
+        cvx.strokeStyle = "black";
+        cvx.strokeRect(50,50,100,80);
+
+        cvx.fillColor = "red";
+        cvx.strokeStyle = "red";
+        cvx.beginPath();
+        cvx.moveTo(0,0);
+        cvx.lineTo(200,20);
+        cvx.stroke();
+
+        cvx.beginPath();
+        cvx.lineWidth = 5;
+        cvx.setLineDash([1,2,3,4]);
+        cvx.moveTo(30,30);
+        cvx.lineTo(70,70);
+        cvx.stroke();
+
+        cvx.font = "5px 바탕";
+        cvx.fillStyle = "blue";
+        cvx.fillText("연습만이 살길이다!",30,30);
+        cvx.strokeStyle = "pink";
+        cvx.strokeRect(20,20,50,80);
+
+    </script>
+</body>
