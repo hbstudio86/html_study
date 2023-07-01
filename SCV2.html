@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>문자열 조회 및 삽입</title>
+    <script>
+        function readTextFile() {
+            var fileURL = "C:\\Users\\HBSTUDIO\\OneDrive\\Documents\\h_file.txt";
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var fileContent = xhttp.responseText;
+                    document.getElementById("fileContent").innerText = fileContent;
+                }
+            };
+            xhttp.open("GET", fileURL, true);
+            xhttp.send();
+        }
+
+        function createAndReadTextFile() {
+            var fileURL = "C:\\Users\\HBSTUDIO\\OneDrive\\Documents\\h_file.txt";
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    var fileContent = xhttp.responseText;
+                    document.getElementById("fileContent").innerText = fileContent;
+                }
+            };
+            xhttp.open("POST", fileURL, true);
+            xhttp.send();
+        }
+
+        function searchContent() {
+            var fileContent = document.getElementById("fileContent").innerText;
+            var userInput = document.getElementById("userInput").value;
+
+            if (fileContent.includes(userInput)) {
+                document.getElementById("result").innerText = "일치하는 내용이 있습니다.";
+            } else {
+                document.getElementById("result").innerText = "일치하는 내용이 없습니다.";
+            }
+        }
+
+        function insertContent() {
+            var fileContent = document.getElementById("fileContent").innerText;
+            var userInput = document.getElementById("userInput").value;
+
+            fileContent += "\n" + userInput;
+            document.getElementById("fileContent").innerText = fileContent;
+
+            var fileURL = "C:\\Users\\HBSTUDIO\\OneDrive\\Documents\\h_file.txt";
+            var xhttp = new XMLHttpRequest();
+            xhttp.open("PUT", fileURL, true);
+            xhttp.send(fileContent);
+        }
+
+        window.onload = function() {
+            readTextFile();
+        };
+    </script>
+</head>
+<body>
+    <h1>문자열 조회 및 삽입</h1>
+    <label for="userInput">문자열 입력:</label>
+    <input type="text" id="userInput">
+    <br>
+    <button onclick="searchContent()">조회</button>
+    <button onclick="insertContent()">삽입</button>
+    <br>
+    <h2>파일 내용:</h2>
+    <pre id="fileContent"></pre>
+    <h2 id="result"></h2>
+</body>
+</html>

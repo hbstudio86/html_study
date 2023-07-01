@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>파일에 문자열 삽입</title>
+    <script>
+        function insertIntoFile() {
+            var userInput = document.getElementById("userInput").value;
+            var filePath = "C:\\Users\\HBSTUDIO\\OneDrive\\Documents\\h_file.txt";
+
+            var fileURL = "file:///" + filePath.replace(/\\/g, '/');
+            var link = document.createElement('a');
+            link.href = fileURL;
+            link.download = filePath;
+            link.target = '_blank';
+
+            var fileContent = userInput;
+            var blob = new Blob([fileContent], { type: 'text/plain' });
+            link.href = URL.createObjectURL(blob);
+            link.click();
+        }
+    </script>
+</head>
+<body>
+    <h1>파일에 문자열 삽입</h1>
+    <label for="userInput">문자열 입력:</label>
+    <input type="text" id="userInput">
+    <br>
+    <button onclick="insertIntoFile()">파일에 삽입</button>
+</body>
+</html>
