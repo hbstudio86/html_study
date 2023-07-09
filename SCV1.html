@@ -1,30 +1,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>파일에 문자열 삽입</title>
+    <title>txt 파일 열기</title>
     <script>
-        function insertIntoFile() {
-            var userInput = document.getElementById("userInput").value;
-            var filePath = "C:\\Users\\HBSTUDIO\\OneDrive\\Documents\\h_file.txt";
+        function openFile() {
+            var filePath = document.getElementById("filePath").value;
 
-            var fileURL = "file:///" + filePath.replace(/\\/g, '/');
-            var link = document.createElement('a');
-            link.href = fileURL;
-            link.download = filePath;
-            link.target = '_blank';
-
-            var fileContent = userInput;
-            var blob = new Blob([fileContent], { type: 'text/plain' });
-            link.href = URL.createObjectURL(blob);
-            link.click();
+            fetch(filePath)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error("파일을 열 수 없습니다.");
+                    }
+                    return response.text();
+                })
+                .then(data => {
+                    document.getElementById("fileContent").innerText = data;
+                })
+                .catch(error => {
+                    console.log(error);
+                });
         }
     </script>
 </head>
 <body>
-    <h1>파일에 문자열 삽입</h1>
-    <label for="userInput">문자열 입력:</label>
-    <input type="text" id="userInput">
+    <h1>txt 파일 열기</h1>
+    <label for="filePath">파일 경로:</label>
+    <input type="text" id="filePath" placeholder="예: C:\example\file.txt">
+    <button onclick="openFile()">열기</button>
     <br>
-    <button onclick="insertIntoFile()">파일에 삽입</button>
+    <h2>파일 내용:</h2>
+    <pre id="fileContent"></pre>
 </body>
 </html>
