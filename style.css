@@ -2,3 +2,9 @@
 h4 {border-color: blue; block-size: 25px; color: red; border-style: solid; background-color: blueviolet;}
 label {border:1px red solid;}
 ul > li {border: 1px black solid;}
+.list1 ul li:nth-of-type(odd) {background-color: green;}
+.list1 ul li:nth-of-type(even) {background-color: goldenrod;}
+.p1 input[type="text"] {background-color: gray;}
+.p1 input[type="password"] {border: 1px red solid;}
+.p1 input[type="password"]:hover {background-color: aqua;}
+.p1 input[type="text"]::before {content: "Before"; color: black;}
