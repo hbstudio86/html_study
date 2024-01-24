@@ -30,6 +30,7 @@ section.main{
     font-weight: 600;
     letter-spacing: -5px;
     margin-bottom: 20px;
+    text-align: center;
     
 }
 
@@ -45,7 +46,7 @@ input[name="sbar"]{
     
     /* position: absolute; */
     
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 100px;
     width: 400px;
 
@@ -54,23 +55,32 @@ input[name="sbar"]{
 
 .doc{
     /* position: absolute; */
-    border: 1px solid black;
+    /* border: 1px solid black; */
     width: 50px;
     margin: auto;
     /* width: 80px;
     margin-left: 20%; */
+    margin-left: 0px;
 }
 
 .webstore{
-    position: absolute;
+    /* position: absolute; */
+    width: 80px;
+    margin-top: -20px;
+    margin-left: 150px;
+    /* border: 1px solid black; */
 }
 
 .hlink{
-    position: absolute;
+    /* position: absolute; */
+    /* border: 1px solid black; */
+    width: 110px;
+    margin-left: 290px;
+    margin-top: -20px;
 }
 
 body>section>div>div:nth-child(1){
-    border: 1px solid red;
+    /* border: 1px solid red; */
 }
 
 footer{
