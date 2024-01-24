@@ -38,6 +38,7 @@ input[name="sbar"]{
     height: 30px;
     text-align: center;
     border-radius: 15px;
+    margin-bottom: 10px;
 }
 
 .under{
@@ -45,15 +46,17 @@ input[name="sbar"]{
     /* position: absolute; */
     
     border: 1px solid black;
-    margin-top: 5px;
     height: 100px;
     width: 400px;
-    margin-left: 200px;
+
+    margin: auto;
 }
 
 .doc{
-    position: absolute;
+    /* position: absolute; */
     border: 1px solid black;
+    width: 50px;
+    margin: auto;
     /* width: 80px;
     margin-left: 20%; */
 }
@@ -64,6 +67,10 @@ input[name="sbar"]{
 
 .hlink{
     position: absolute;
+}
+
+body>section>div>div:nth-child(1){
+    border: 1px solid red;
 }
 
 footer{
