@@ -31,11 +31,14 @@ section.main{
     letter-spacing: -5px;
     margin-bottom: 20px;
     text-align: center;
-    background:linear-gradient(90deg,blue 39%,red 39%, red 46.5%, yellow 46%, yellow 53.5%, blue 53.5%,blue 60.5%,green 60.5%,green 63.5%,red 63.8%);
+    /* background:linear-gradient(90deg,blue 39%,red 39%, red 46.5%, yellow 46%, yellow 53.5%, blue 53.5%,blue 60.5%,green 60.5%,green 63.5%,red 63.8%);
     color: transparent;
-    -webkit-background-clip: text;
+    -webkit-background-clip: text; */
 }
-
+span{
+    /* border: 1px solid black; */
+    margin: -10px;
+}
 input[name="sbar"]{
     width: 400px;
     height: 30px;
